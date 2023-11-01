@@ -1,0 +1,6 @@
+.idea/
+cmake-build-debug
+.bin
+build/
+PDCurses-3.8/
+.DS_Store

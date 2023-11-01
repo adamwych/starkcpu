@@ -1,0 +1,19 @@
+set r0, 0x0100 as source_address
+set r1, 0x0500 as destination_address
+set r2, 32 as remaining_bytes
+
+loop {
+    set [destination_address], [source_address]
+    inc source_address
+    inc destination_address
+    dec remaining_bytes
+    cmp remaining_bytes, 0
+    jne loop
+}
+
+set r0, 0x0100
+set r1, 0x0500
+set r2, 32
+jmp loop
+
+hlt
